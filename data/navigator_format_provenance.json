@@ -1,0 +1,7 @@
+{
+  "layer_format_version": "4.5",
+  "spec_url": "https://github.com/mitre-attack/attack-navigator/blob/master/layers/spec/v4.5/layerformat.md",
+  "sample_url": "https://github.com/mitre-attack/attack-navigator/blob/master/layers/samples/Bear_APT.json",
+  "fields_used": ["versions.attack", "versions.navigator", "versions.layer", "domain", "name", "description", "techniques.techniqueID", "techniques.score", "techniques.color", "techniques.comment", "metadata"],
+  "notes": "Schema shape was checked against the official Navigator v4.5 layer format document and sample layer. ATT&CK technique annotations use supported comments and metadata."
+}

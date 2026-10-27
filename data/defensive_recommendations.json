@@ -1,0 +1,38 @@
+[
+  {
+    "finding": "Unexpected document-review email (E-01); interaction is not established.",
+    "action": "Review mail authentication, URL-reputation-at-delivery, and user-reporting workflows; consider controls that restrict risky link handling.",
+    "purpose": "Preventive and detective",
+    "telemetry": "Mail authentication results, URL rewrite/click events, user reports, and message disposition.",
+    "expected_outcome": "Improve detection and investigation of suspicious messages while measuring false positives and user impact.",
+    "limitations": "A control cannot establish whether a user acted without interaction telemetry, and filtering can affect legitimate mail.",
+    "reference": "https://d3fend.mitre.org/"
+  },
+  {
+    "finding": "Unfamiliar successful sign-in (E-02); legitimacy remains unresolved.",
+    "action": "Review identity risk signals and MFA/session policies; make sign-in and device context available to investigators.",
+    "purpose": "Preventive and detective",
+    "telemetry": "Authentication method, MFA result, device identity/posture, source network, session/token events, and sign-in risk.",
+    "expected_outcome": "Support timely validation of anomalous access and reduce exposure from invalid sessions.",
+    "limitations": "Geographic or network novelty alone creates false positives; strong authentication does not rule out session theft.",
+    "reference": "https://d3fend.mitre.org/"
+  },
+  {
+    "finding": "Office application to interpreter process relationship (E-03) and discovery-like queries (E-04).",
+    "action": "Collect process lineage and interpreter telemetry; review application control and office child-process policies for business compatibility.",
+    "purpose": "Preventive and detective",
+    "telemetry": "Process creation, parent/child relationship, script logging, file metadata, and endpoint alert disposition.",
+    "expected_outcome": "Improve visibility into unusual execution chains and allow policy tuning against legitimate workflows.",
+    "limitations": "Blocking rules can disrupt add-ins and administration; process names and parent-child relationships do not prove malicious intent.",
+    "reference": "https://d3fend.mitre.org/"
+  },
+  {
+    "finding": "Unusual document access and outbound flow (E-05, E-06); data movement is unproven.",
+    "action": "Correlate document audit and download events with process-attributed network telemetry; define a tested escalation path for confirmed account or endpoint risk.",
+    "purpose": "Detective and response",
+    "telemetry": "Document sensitivity/access logs, downloads/shares, endpoint process-network attribution, DNS/proxy records, and flow metadata.",
+    "expected_outcome": "Provide defensible evidence about access context and data movement before containment decisions.",
+    "limitations": "Encrypted flow metadata does not reveal content; containment can interrupt business; preserve evidence and follow organisational authority.",
+    "reference": "https://d3fend.mitre.org/"
+  }
+]

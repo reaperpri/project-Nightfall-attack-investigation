@@ -1,0 +1,50 @@
+[
+  {
+    "hypothesis_id": "H-01",
+    "question": "Was the unfamiliar sign-in consistent with legitimate employee activity?",
+    "supporting_observations": ["E-02", "E-00", "E-11"],
+    "contradicting_evidence": ["Known travel or VPN records showing the sign-in was expected"],
+    "data_sources": ["Identity sign-in logs", "MFA records", "Device and session identifiers", "Employee confirmation"],
+    "procedure": "Compare source network, device, session, MFA method, and time with a representative baseline; verify the activity with the employee through a trusted channel.",
+    "findings": "",
+    "conclusion": "unresolved",
+    "confidence": 0.3,
+    "next_action": "Request the full synthetic sign-in/session record and compare the device and MFA details."
+  },
+  {
+    "hypothesis_id": "H-02",
+    "question": "Did the office application's child process execute an interpreter?",
+    "supporting_observations": ["E-03", "E-07"],
+    "contradicting_evidence": ["A signed, approved add-in or administrative workflow that explains the process tree"],
+    "data_sources": ["Endpoint process creation", "Office add-in inventory", "Script-block or equivalent interpreter telemetry"],
+    "procedure": "Reconstruct parent-child process lineage, validate file signatures and add-ins, then review collected interpreter telemetry without executing recovered strings.",
+    "findings": "",
+    "conclusion": "unresolved",
+    "confidence": 0.4,
+    "next_action": "Obtain the synthetic process tree, file metadata, and script telemetry for the recorded interval."
+  },
+  {
+    "hypothesis_id": "H-03",
+    "question": "Which process or system details were enumerated?",
+    "supporting_observations": ["E-04"],
+    "contradicting_evidence": ["Approved inventory software, known script ownership, and a matching change record"],
+    "data_sources": ["Endpoint process and script telemetry", "Software inventory", "Change-management record"],
+    "procedure": "Identify the initiating process, queried object classes, user context, and whether the same query pattern appears in approved tools.",
+    "findings": "",
+    "conclusion": "unresolved",
+    "confidence": 0.35,
+    "next_action": "Compare the process lineage and query telemetry with the organisation's approved inventory tooling."
+  },
+  {
+    "hypothesis_id": "H-04",
+    "question": "Was sensitive information accessed or collected?",
+    "supporting_observations": ["E-05", "E-06"],
+    "contradicting_evidence": ["Role-based business justification, no download events, and process attribution to approved activity"],
+    "data_sources": ["Document audit", "Download/share logs", "Endpoint file access", "Network-flow and proxy telemetry"],
+    "procedure": "Determine document sensitivity and business context, then correlate reads, downloads, archive activity, and attributed outbound connections.",
+    "findings": "",
+    "conclusion": "unresolved",
+    "confidence": 0.25,
+    "next_action": "Inspect document audit detail and identify the process associated with the outbound flow."
+  }
+]

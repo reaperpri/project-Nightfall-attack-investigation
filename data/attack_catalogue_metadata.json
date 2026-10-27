@@ -1,0 +1,10 @@
+{
+  "catalogue_version": "15.1",
+  "domain": "enterprise-attack",
+  "source_url": "https://github.com/mitre-attack/attack-stix-data/blob/master/enterprise-attack/enterprise-attack-15.1.json",
+  "retrieved_date": "2026-10-27",
+  "source_type": "Official MITRE ATT&CK STIX 2.1 release, version-pinned file",
+  "source_bundle_sha256": "a57988bffe402bb3e19d92dbe80a12143e1970b814e013e080f9df2fa5a3f6bc",
+  "active_technique_count": 637,
+  "notes": "The local catalogue is derived from active Enterprise attack-pattern objects and subtechnique-of relationships in the pinned STIX bundle. It is not the complete STIX knowledge base."
+}
